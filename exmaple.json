@@ -1,0 +1,16 @@
+{
+  "definitions": {
+  },
+  "components": [
+    {
+      "publisher": "kemitchell",
+      "project": "permissive-copyright-license",
+      "edition": "1e",
+      "lock": true,
+      "mapping": {
+        "Licensor": "Contractor",
+        "Work": "Software"
+      }
+    }
+  ]
+}

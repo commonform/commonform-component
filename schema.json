@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "definitions": {
+      "type": "object",
+      "patternProperties": {
+        "^[\\x20-\\x7E]+$": {
+          "type": "string",
+          "pattern": "^[\\x20-\\x7E]+$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "project": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lock": {
+            "type": "boolean"
+          },
+          "mapping": {
+            "type": "object",
+            "patternProperties": {
+              "^[\\x20-\\x7E]+$": {
+                "type": "string",
+                "pattern": "^[\\x20-\\x7E]+$"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "publisher",
+          "project",
+          "lock",
+          "mapping"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "definition",
+    "components"
+  ],
+  "additionalProperties": false
+}
